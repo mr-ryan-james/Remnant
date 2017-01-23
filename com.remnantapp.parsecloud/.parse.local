@@ -1,0 +1,10 @@
+{
+  "applications": {
+    "_default": {
+      "link": "remnant"
+    },
+    "remnant": {
+      "applicationId": "JXay6lUNHtqiFewcvgSmqKNAGIjwTu4otmQ62w3D"
+    }
+  }
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<head>
+    <title>Remnants</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Google Font: Open Sans -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:400,300,700">
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="/css/webview/fontawesome/css/font-awesome.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/webview/bootstrap/dist/css/bootstrap.min.css">
+
+
+    <!-- App CSS -->
+    <link rel="stylesheet" href="/css/webview/mvpready-admin.css">
+    <!-- <link rel="stylesheet" href="./css/custom.css"> -->
+
+
+</head>
+<body>
+
+<div id="wrapper" style="padding-bottom: 0;">
+
+
+    <div class="content" style="margin-bottom: 0;">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-12 col-sm-12 col-xs-12">
+
+                    <% remnants.forEach(function(remnant) { %>
+                    <div class="feed-item feed-item-image">
+
+                        <div class="feed-icon">
+                            <a href="http://www.throwaway.com/<%= remnant.id %>">
+                                <i class="fa fa-eye fa-remnant-icon"></i>
+                            </a>
+                        </div>
+                        <!-- /.feed-icon -->
+
+                        <div class="feed-subject">
+                            <p><a href="javascript:;"><%= remnant.userName %></a> <%= remnant.title %></p>
+                        </div>
+                        <!-- /.feed-subject -->
+
+                        <div class="feed-content">
+                            <% if(remnant.image.length > 0) { %>
+                            <div class="thumbnail">
+                                <img src="https://res.cloudinary.com/remnant/image/upload/<%= remnant.image[0] %>"
+                                     style="width: 100%;" alt="<%= remnant.title %>">
+                            </div>
+                            <!-- /.thumbnail -->
+                            <% } %>
+                            <ul class="icons-list">
+                                <li>
+                                    <i class="icon-li fa fa-quote-left"></i>
+                                    <%= remnant.description %>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /.feed-content -->
+
+                        <div class="feed-actions">
+
+                            <a href="javascript:;" class="pull-left"><i class="fa fa-heart fa-2x"></i> 123</a>
+                            <a href="javascript:;" class="pull-left"><i class="fa fa-comment-o fa-2x"></i> 29</a>
+                            <a href="http://www.throwaway.com/<%= remnant.id %>" class="pull-left">
+                            <i class="fa fa-map-marker fa-2x"></i>
+                            </a>
+                            <a href="javascript:;" class="pull-right"><i class="fa fa-clock-o fa-2x"></i> 2 days ago</a>
+                        </div>
+                        <!-- /.feed-actions -->
+
+                    </div>
+                    <!-- /.feed-item -->
+                    <% }); %>
+
+                </div>
+                <!-- /.col -->
+
+            </div>
+            <!-- /.row -->
+
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- .content -->
+
+</div>
+
+
+</body>

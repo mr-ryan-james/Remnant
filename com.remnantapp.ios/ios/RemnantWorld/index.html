@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+
+<head>
+
+    <!--  basic meta information -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="application/json; charset=utf-8">
+    <meta content="width=device-width,initial-scale=1,maximum-scale=5,user-scalable=yes" name="viewport">
+
+    <title>My ARchitect World</title>
+
+    <script src="architect://architect.js"></script>
+    <script src="../ade.js"></script>
+
+
+    <link rel="stylesheet" href="css/remnantWorld.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/mvpready-admin.css" />
+
+    <!-- positioning of poi-radar -->
+    <link rel="stylesheet" href="css/remnantWorld.css" />
+
+
+    <!-- marker representation-->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/marker.js"></script>
+
+    <!-- World logic-->
+    <script type="text/javascript" src="jquery/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/nativedetailscreen.js"></script>
+
+    <!-- radar component -->
+    <script type="text/javascript" src="js/radar.js"></script>
+</head>
+<body>
+    <div class="radarContainer_left" id="radarContainer"></div>
+
+
+    <div id="basicModal" class="modal fade" style="display: none;">
+
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+
+                <!-- /.modal-header -->
+
+                <div class="modal-body">
+                    <div class="content">
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-7">
+                                    <div class="heading-block">
+                                        <div class="profile-avatar">
+                                            <img id="imageDetail" src="../../global/img/avatars/avatar-2-lg.jpg" class="profile-avatar-img img-responsive thumbnail" alt="Profile Image">
+                                        </div>
+                                    </div> <!-- /.heading-block -->
+
+                                    <div class="share-widget clearfix">
+
+                                        <textarea class="form-control share-widget-textarea" rows="3" placeholder="Share what you've been up to..." tabindex="1"></textarea>
+
+                                        <div class="share-widget-actions">
+                                            <div class="share-widget-types pull-left">
+                                                <a href="javascript:;" class="fa fa-picture-o ui-tooltip" title="Post an Image"><i></i></a>
+                                                <a href="javascript:;" class="fa fa-video-camera ui-tooltip" title="Upload a Video"><i></i></a>
+                                                <a href="javascript:;" class="fa fa-lightbulb-o ui-tooltip" title="Post an Idea"><i></i></a>
+                                                <a href="javascript:;" class="fa fa-question-circle ui-tooltip" title="Ask a Question"><i></i></a>
+                                            </div>
+
+                                            <div class="pull-right">
+                                                <a class="btn btn-primary btn-sm" tabindex="2">Post</a>
+                                            </div>
+
+                                        </div> <!-- /.share-widget-actions -->
+
+                                    </div> <!-- /.share-widget -->
+
+                                    <br><br>
+
+                                    <div class="feed-item feed-item-idea">
+
+                                        <div class="feed-icon bg-primary">
+                                            <i class="fa fa-lightbulb-o"></i>
+                                        </div> <!-- /.feed-icon -->
+
+                                        <div class="feed-subject">
+                                            <p><a href="javascript:;">Nikita Williams</a> shared an idea: <a href="javascript:;">Create an Awesome Idea</a></p>
+                                        </div> <!-- /.feed-subject -->
+
+                                        <div class="feed-content">
+                                            <ul class="icons-list">
+                                                <li>
+                                                    <i class="icon-li fa fa-quote-left"></i>
+                                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes.
+                                                </li>
+                                            </ul>
+                                        </div> <!-- /.feed-content -->
+
+                                        <div class="feed-actions">
+                                            <a href="javascript:;" class="pull-left"><i class="fa fa-thumbs-up"></i> 123</a>
+                                            <a href="javascript:;" class="pull-left"><i class="fa fa-comment-o"></i> 29</a>
+
+                                            <a href="javascript:;" class="pull-right"><i class="fa fa-clock-o"></i> 2 days ago</a>
+                                        </div> <!-- /.feed-actions -->
+
+                                    </div> <!-- /.feed-item -->
+
+
+
+                                    <div class="feed-item feed-item-image">
+
+                                        <div class="feed-icon bg-secondary">
+                                            <i class="fa fa-picture-o"></i>
+                                        </div> <!-- /.feed-icon -->
+
+                                        <div class="feed-subject">
+                                            <p><a href="javascript:;">Nikita Williams</a> posted the <strong>4 files</strong>: <a href="javascript:;">Annual Reports</a></p>
+                                        </div> <!-- /.feed-subject -->
+
+                                        <div class="feed-content">
+                                            <div class="thumbnail" style="width: 375px">
+                                                <img src="./img/mockup.png" style="width: 100%;" alt="Gallery Image">
+                                            </div> <!-- /.thumbnail -->
+                                        </div> <!-- /.feed-content -->
+
+                                        <div class="feed-actions">
+                                            <a href="javascript:;" class="pull-left"><i class="fa fa-thumbs-up"></i> 123</a>
+                                            <a href="javascript:;" class="pull-left"><i class="fa fa-comment-o"></i> 29</a>
+
+                                            <a href="javascript:;" class="pull-right"><i class="fa fa-clock-o"></i> 2 days ago</a>
+                                        </div> <!-- /.feed-actions -->
+
+                                    </div> <!-- /.feed-item -->
+
+
+
+                                    <div class="feed-item feed-item-file">
+
+                                        <div class="feed-icon bg-success">
+                                            <i class="fa fa-cloud-upload"></i>
+                                        </div> <!-- /.feed-icon -->
+
+                                        <div class="feed-subject">
+                                            <p><a href="javascript:;">Nikita Williams</a> posted the <strong>4 files</strong>: <a href="javascript:;">Annual Reports</a></p>
+                                        </div> <!-- /.feed-subject -->
+
+                                        <div class="feed-content">
+                                            <ul class="icons-list">
+                                                <li>
+                                                    <i class="icon-li fa fa-file-text-o"></i>
+                                                    <a href="javascript:;">Annual Report 2007</a> - annual_report_2007.pdf
+                                                </li>
+
+                                                <li>
+                                                    <i class="icon-li fa fa-file-text-o"></i>
+                                                    <a href="javascript:;">Annual Report 2008</a> - annual_report_2007.pdf
+                                                </li>
+
+                                                <li>
+                                                    <i class="icon-li fa fa-file-text-o"></i>
+                                                    <a href="javascript:;">Annual Report 2009</a> - annual_report_2007.pdf
+                                                </li>
+
+                                                <li>
+                                                    <i class="icon-li fa fa-file-text-o"></i>
+                                                    <a href="javascript:;">Annual Report 2010</a> - annual_report_2007.pdf
+                                                </li>
+                                            </ul>
+                                        </div> <!-- /.feed-content -->
+
+                                        <div class="feed-actions">
+                                            <a href="javascript:;" class="pull-left"><i class="fa fa-thumbs-up"></i> 123</a>
+                                            <a href="javascript:;" class="pull-left"><i class="fa fa-comment-o"></i> 29</a>
+
+                                            <a href="javascript:;" class="pull-right"><i class="fa fa-clock-o"></i> 2 days ago</a>
+                                        </div> <!-- /.feed-actions -->
+
+                                    </div> <!-- /.feed-item -->
+
+
+
+                                    <div class="feed-item feed-item-bookmark">
+
+                                        <div class="feed-icon bg-tertiary">
+                                            <i class="fa fa-bookmark"></i>
+                                        </div> <!-- /.feed-icon -->
+
+                                        <div class="feed-subject">
+                                            <p><a href="javascript:;">Nikita Williams</a> bookmarked a page on Delicious: <a href="javascript:;">Jumpstart Themes</a></p>
+                                        </div> <!-- /.feed-subject -->
+
+                                        <div class="feed-content">
+                                        </div> <!-- /.feed-content -->
+
+                                        <div class="feed-actions">
+                                            <a href="javascript:;" class="pull-left"><i class="fa fa-thumbs-up"></i> 123</a>
+                                            <a href="javascript:;" class="pull-left"><i class="fa fa-comment-o"></i> 29</a>
+
+                                            <a href="javascript:;" class="pull-right"><i class="fa fa-clock-o"></i> 2 days ago</a>
+                                        </div> <!-- /.feed-actions -->
+
+                                    </div> <!-- /.feed-item -->
+
+
+
+                                    <div class="feed-item feed-item-question">
+
+                                        <div class="feed-icon bg-secondary">
+                                            <i class="fa fa-question"></i>
+                                        </div> <!-- /.feed-icon -->
+
+                                        <div class="feed-subject">
+                                            <p><a href="javascript:;">Nikita Williams</a> posted the question: <a href="javascript:;">Who can I call to get a new parking pass for the Rowan Building?</a></p>
+                                        </div> <!-- /.feed-subject -->
+
+                                        <div class="feed-content">
+                                            <ul class="icons-list">
+                                                <li>
+                                                    <i class="icon-li fa fa-quote-left"></i>
+                                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes.
+                                                </li>
+                                            </ul>
+                                        </div> <!-- /.feed-content -->
+
+                                        <div class="feed-actions">
+                                            <a href="javascript:;" class="pull-left"><i class="fa fa-thumbs-up"></i> 123</a>
+                                            <a href="javascript:;" class="pull-left"><i class="fa fa-comment-o"></i> 29</a>
+
+                                            <a href="javascript:;" class="pull-right"><i class="fa fa-clock-o"></i> 2 days ago</a>
+                                        </div> <!-- /.feed-actions -->
+
+                                    </div> <!-- /.feed-item -->
+
+                                    <br class="visible-xs">
+                                    <br class="visible-xs">
+
+                                </div> <!-- /.col -->
+
+
+
+                            </div> <!-- /.row -->
+
+                            <br><br>
+
+                        </div> <!-- /.container -->
+
+                    </div> <!-- .content -->
+                </div> <!-- /.modal-body -->
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div> <!-- /.modal-footer -->
+
+            </div> <!-- /.modal-content -->
+
+        </div><!-- /.modal-dialog -->
+
+    </div>
+</body>
+
+</html>

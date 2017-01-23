@@ -1,0 +1,28 @@
+{
+  "Parse":{
+    "applicationId": "JXay6lUNHtqiFewcvgSmqKNAGIjwTu4otmQ62w3D",
+    "restKey": "O2J52YuIrM82CwZyhvpoeinMaJQw95guh4dvLwW0"
+  },
+  "Facebook": {
+    "callbackUrl": "http://localhost:7011/auth/facebook/callback",
+    "itemDetailsPath": "/main/details/",
+    "tagLine" : "Billions of Bids - Not your grandma's marketplace!"
+  },
+  "Cloudinary": {
+    "cloudName" : "remnant",
+    "key": "685589888155893",
+    "secret" : "pdWACB44uBbEarIiI-oOTeh3M2I"
+  },
+  "Google" : {
+    "apiKey": "AIzaSyAHPw9JlbIYTogomlMY3lAZn94Fj61G4Lg"
+  },
+  "forceDomain" : {
+    "domain":"localhost:7011",
+    "protocol": "http"
+  },
+  "mongodb":{
+    "user": "ryan",
+    "pass": "h1pst*r",
+    "instance": "ds031613.mongolab.com:31613/remnant_dev"
+  }
+}

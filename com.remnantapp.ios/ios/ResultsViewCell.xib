@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchResultsCell" rowHeight="131" id="Hal-2h-Kze" customClass="ResultsViewCell" customModule="Remnant" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="620" height="131"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hal-2h-Kze" id="gNj-Qm-56g">
+                <rect key="frame" x="0.0" y="0.0" width="620" height="130"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ln6-3v-Ye6">
+                        <rect key="frame" x="8" y="54" width="76" height="21"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IiT-LU-yUj">
+                        <rect key="frame" x="527" y="47" width="74" height="36"/>
+                        <animations/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                        <state key="normal" title="follow" backgroundImage="greyButton">
+                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="followButtonTapped:" destination="Hal-2h-Kze" eventType="touchUpInside" id="Q9t-e3-UV6"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <animations/>
+                <constraints>
+                    <constraint firstItem="IiT-LU-yUj" firstAttribute="centerY" secondItem="gNj-Qm-56g" secondAttribute="centerY" id="BrK-zp-baX"/>
+                    <constraint firstItem="ln6-3v-Ye6" firstAttribute="centerY" secondItem="gNj-Qm-56g" secondAttribute="centerY" id="Dev-6B-F9i"/>
+                    <constraint firstItem="ln6-3v-Ye6" firstAttribute="leading" secondItem="gNj-Qm-56g" secondAttribute="leading" constant="8" id="Yvl-Zs-WyI"/>
+                    <constraint firstAttribute="trailing" secondItem="IiT-LU-yUj" secondAttribute="trailing" constant="19" id="bBH-jv-50J"/>
+                </constraints>
+            </tableViewCellContentView>
+            <animations/>
+            <connections>
+                <outlet property="followButton" destination="IiT-LU-yUj" id="fam-gK-FFt"/>
+                <outlet property="usernameLabel" destination="ln6-3v-Ye6" id="pEv-LU-5bB"/>
+            </connections>
+            <point key="canvasLocation" x="627" y="283.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="greyButton" width="36" height="36"/>
+    </resources>
+</document>
